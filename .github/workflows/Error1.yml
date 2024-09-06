@@ -7,6 +7,17 @@ on:
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:
+    inputs:
+      os:
+        type: string
+        description: 'systeme d exploitation'
+        default: 'ubuntu-latest'
+        required: true
+      surname:
+        type: string
+        description: 'prenom'
+        default: 'john-doe'
+        required: true
   
   
 jobs:
