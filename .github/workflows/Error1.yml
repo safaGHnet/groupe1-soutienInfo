@@ -6,6 +6,8 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:
+  
   
 jobs:
   # Ce workflow contient un seul job appelé “build”
@@ -14,4 +16,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run a one-line script
-        run: eho Hello, ${{ inputs.surname }}!
+        run: echo Hello, ${{ inputs.surname }}!
