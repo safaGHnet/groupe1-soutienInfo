@@ -23,8 +23,8 @@ on:
 jobs:
   # Ce workflow contient un seul job appelé “build”
   build:
-    runs-on: ${{ inputs.os }}
+    runs-on: ${{ inputs.os || 'ubuntu-latest'}}
     steps:
       - uses: actions/checkout@v4
       - name: Run a one-line script
-        run: echo Hello, ${{ inputs.surname }}!
+        run: echo Hello, ${{ inputs.surname || 'john-doe' }}!
